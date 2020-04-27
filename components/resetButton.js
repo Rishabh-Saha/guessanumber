@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Button, StyleSheet } from 'react-native';
+import { View, Button, StyleSheet, Dimensions } from 'react-native';
 
 import MainButton from './mainButton';
 
@@ -11,7 +11,8 @@ const ResetButton = props => {
 
 const styles = StyleSheet.create({
     resetContainer: {
-        width: "40%"
+        width: Dimensions.get("window").width > 350 ? "40%" : Dimensions.get("window").width / 2,
+        alignItems: 'center'
     }
 });
 
